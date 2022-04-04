@@ -1,4 +1,4 @@
-# Global Payments ViComm Plugin for Prestashop
+# GpViComm Plugin for Prestashop
 
 ## 1. Prerequisites
 ### 1.1. XAMPP, LAMPP, MAMPP, Bitnami or any PHP development environment
@@ -28,14 +28,14 @@ You can download the current stable release from: https://github.com/gpvicomm/pg
 9. We will wait until the **Installing module** screen changes to **Module installed!**.
 10. Now we can click on **Configure** button displayed on the screen or in the **Configure** button displayed on the **Payment** section on the **Module manager**.
 11. Inside the **Payment Gateway Configurations** we need to configure or CLIENT/SERVER credentials provided by **Global Payments ViComm**, we can select the **Checkout Language** that will be displayed to the user, also we need to select an **Environment**, by default STG(Staging) is selected.
-12. Congrats! Now we have the Global Payments ViComm Prestashop plugin correctly configured.
+12. Congrats! Now we have the GpViComm Prestashop plugin correctly configured.
 
 ## 4. Considerations and Comments
 ### 4.1. Refunds
 - The **2.0.0** plugin version does not support the **Partial Refunds** by Prestashop. However, the plugin supports **Standard Refunds** by Prestashop.
 - The **Standard Refund** can be interpreted as a partial refund on Global Payments ViComm side, a success refund operation depends on the configured payment network accepting partial refunds.
 ### 4.2. Webhook
-The Global Payments ViComm Prestashop plugin has an internal webhook in order to keep updated the transactions statuses between Prestashop and Global Payments ViComm. You need to follow the next steps to configure the webhook:
+The GpViComm Prestashop plugin has an internal webhook in order to keep updated the transactions statuses between Prestashop and GpViComm. You need to follow the next steps to configure the webhook:
 1. Login into the Prestashop Back-office.
 2. Navigate to Advance Parameters -> Web Services menu options to open the Web Services page.
 3. It will redirect to the Web Services page having the listing of available Webservices, and the configuration form to configure the service.
@@ -47,4 +47,4 @@ The Global Payments ViComm Prestashop plugin has an internal webhook in order to
 9. We will set the **Status** on Enable to provide a grant to access the data using the key.
 10. Finally, we need to configure the **Permission** field to provide the permission to access the data using the certain key. Here we need to search the resourde called **paymentezwebhook** and select the **Add (POST)** checkbox.
 11. The webhook its located on **https://{mystoreurl}/api/gpvicommwebhook?ws_key=KEY_GENERATED_ON_STEP_6**.
-12. You need to give this URL to your Global Payments ViComm agent.
+12. You need to give this URL to your GpViComm agent.
