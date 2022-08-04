@@ -43,7 +43,10 @@ class PG_Prestashop_PluginPaymentModuleFrontController extends ModuleFrontContro
         }
         $checkout_language = $this->mapCheckoutLanguage(Configuration::get('checkout_language'));
         $environment       = $this->mapEnvironment(Configuration::get('environment'));
-
+        
+        $currency = new CurrencyCore($cart->id_currency);
+        $currency_iso_code = $currency->iso_code;
+        
         $this->context->smarty->assign([
             'app_code_client'      => Configuration::get('app_code_client'),
             'app_key_client'       => Configuration::get('app_key_client'),
@@ -61,7 +64,7 @@ class PG_Prestashop_PluginPaymentModuleFrontController extends ModuleFrontContro
             'products'             => $products,
             'user_firstname'       => $customer->firstname,
             'user_lastname'        => $customer->lastname,
-            'currency'             => Currency::getIsoCodeById($cart->id_currency),
+            'currency'             => $currency_iso_code,
             'expiration_days'      => Configuration::get('ltp_expiration_days'),
             'order_url'            => Context::getContext()->shop->getBaseURL(true).'index.php?controller=order-confirmation&id_cart='.(int)$cart->id.'&id_module='.(int)$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key,
             'ltp_button_text'      => Configuration::get('ltp_button_text'),
