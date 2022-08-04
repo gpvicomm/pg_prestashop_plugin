@@ -9,8 +9,8 @@
 ### 1.2. Prestashop
 Warning, if you already install the Bitnami option this step can be omitted.
 
-Prestashop is an e-commerce solution, it's developed on PHP. Now the last stable version is the 1.7.X.
-- Download: https://www.prestashop.com/en/download
+Prestashop is an e-commerce solution, it's developed on PHP. Now the last stable version is the 1.7.X
+- Download: https://www.prestashop.com/en/download (version > 1.7.7.X
 - Install Guide: https://www.prestashop.com/en/blog/how-to-install-prestashop
 
 ## 2. Git Repository
@@ -18,8 +18,8 @@ You can download the current stable release from: https://github.com/gpvicomm/pg
 
 ## 3. Plugin Installation on Prestashop
 1. First, we need to download the current stable release of Global Payments ViComm Prestashop plugin from the previous step.
-2. We need to unzip the file to get the pg_prestashop_plugin-2.0.0 folder.
-3. Now you rename the folder from **pg_prestashop_plugin-2.0.0** to **pg_prestashop_plugin**.
+2. We need to unzip the file to get the pg_prestashop_plugin-2.1.2 folder.
+3. Now you rename the folder from **pg_prestashop_plugin-2.1.2** to **pg_prestashop_plugin**.
 4. Compress on zip format the folder to get a file called **pg_prestashop_plugin.zip**.
 5. We need to log in to our Prestashop admin page.
 6. Now we click on **Improve -> Modules -> Module Manager**
@@ -32,7 +32,7 @@ You can download the current stable release from: https://github.com/gpvicomm/pg
 
 ## 4. Considerations and Comments
 ### 4.1. Refunds
-- The **2.0.0** plugin version does not support the **Partial Refunds** by Prestashop. However, the plugin supports **Standard Refunds** by Prestashop.
+- The **2.1.2** plugin version does not support the **Partial Refunds** by Prestashop. However, the plugin supports **Standard Refunds** by Prestashop.
 - The **Standard Refund** can be interpreted as a partial refund on Global Payments ViComm side, a success refund operation depends on the configured payment network accepting partial refunds.
 ### 4.2. Webhook
 The GpViComm Prestashop plugin has an internal webhook in order to keep updated the transactions statuses between Prestashop and GpViComm. You need to follow the next steps to configure the webhook:
