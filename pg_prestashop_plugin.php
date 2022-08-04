@@ -21,7 +21,7 @@ class PG_Prestashop_Plugin extends PaymentModule
     {
         $this->name                   = 'pg_prestashop_plugin';
         $this->tab                    = 'payments_gateways';
-        $this->version                = '2.1.1';
+        $this->version                = '2.1.2';
         $this->author                 = FLAVOR.$this->l(' Development');
         $this->currencies             = true;
         $this->currencies_mode        = 'radio';
@@ -29,7 +29,7 @@ class PG_Prestashop_Plugin extends PaymentModule
         $this->displayName            = FLAVOR.' Prestashop Plugin';
         $this->description            = FLAVOR.$this->l(' Payment module for process card payments.');
         $this->confirmUninstall       = $this->l('Are you sure you want to uninstall the payment module by ').FLAVOR.'?';
-        $this->ps_versions_compliancy = array('min' => '1.7.7.0', 'max' => _PS_VERSION_);
+        $this->ps_versions_compliancy = array('min' => '1.7.6.0', 'max' => _PS_VERSION_);
 
         parent::__construct();
     }
