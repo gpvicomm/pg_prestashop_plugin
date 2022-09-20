@@ -21,7 +21,7 @@ class PG_Prestashop_Plugin extends PaymentModule
     {
         $this->name                   = 'pg_prestashop_plugin';
         $this->tab                    = 'payments_gateways';
-        $this->version                = '2.1.2';
+        $this->version                = '2.1.3';
         $this->author                 = FLAVOR.$this->l(' Development');
         $this->currencies             = true;
         $this->currencies_mode        = 'radio';
