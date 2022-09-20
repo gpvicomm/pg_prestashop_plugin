@@ -26,7 +26,7 @@ class PG_Prestashop_Plugin extends PaymentModule
         $this->currencies             = true;
         $this->currencies_mode        = 'radio';
         $this->bootstrap              = true;
-        $this->displayName            = FLAVOR.' Prestashop Plugin';
+        $this->displayName            = FLAVOR.' Pago con Tarjeta';
         $this->description            = FLAVOR.$this->l(' Payment module for process card payments.');
         $this->confirmUninstall       = $this->l('Are you sure you want to uninstall the payment module by ').FLAVOR.'?';
         $this->ps_versions_compliancy = array('min' => '1.7.6.0', 'max' => _PS_VERSION_);
